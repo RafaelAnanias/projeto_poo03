@@ -1,6 +1,19 @@
+<div *ngFor="let aluno of alunos">
+  <p><strong>Nome:</strong> {{ aluno.nome }}</p>
+  <p><strong>Idade:</strong> {{ aluno.idade }}</p>
+  <p><strong>Turma:</strong> {{ aluno.turma.nome }}</p>
+  <p><strong>Curso:</strong> {{ aluno.turma.nome }}</p>
+  <p><strong>Professor:</strong> {{ aluno.turma.professor }}</p>
+  <hr>
+</div>
+
+
+<!--->
+
 <h2>Lista de Alunos</h2>
 <ul>
   <li *ngFor="let aluno of alunos">
     {{ aluno.nome }} - {{ aluno.idade }} anos - Turma: {{ aluno.turma.exibirInformacoes() }}
   </li>
 </ul>
+<!---->
