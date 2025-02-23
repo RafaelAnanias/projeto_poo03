@@ -1,0 +1,29 @@
+<form [formGroup]="formulario" >
+  <input type="text" formControlName="nome"     class="form-control">
+  <input type="text"   formControlName="idade"  placeholder="idade" class="form-control">
+  <input type="text"  formControlName="turma"   placeholder="turma" class="form-control">
+
+  <input type="button" value="cadastrar" (click)="cadastrar()" class="btn btn-primary">
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>nome</th>
+      <th>idade</th>
+      <th>turma</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of vetor; index as indice">
+      <td>{{indice}}</td>
+      <td>{{v.nome}}</td>
+      <td>{{v.idade}}</td>
+      <td>{{v.turma}}</td>
+    </tr>
+
+  </tbody>
+
+
+</table>

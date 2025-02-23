@@ -1,0 +1,37 @@
+/* Estilo personalizado para o card */
+.custom-card {
+  border-radius: 10px; /* Arredondando as bordas do card */
+  border: 1px solid #e0e0e0; /* Cor suave de borda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do card */
+  background-color: #fff; /* Cor de fundo branca */
+}
+
+/* Estilo para o título do card */
+.custom-card .card-title {
+  color: #007bff; /* Cor azul para o título */
+  font-weight: bold;
+  font-size: 1.25rem; /* Aumentando o tamanho da fonte */
+}
+
+/* Estilo para o conteúdo do card */
+.custom-card .card-body p {
+  font-size: 1rem;
+  color: #333; /* Cor mais escura para o texto */
+  line-height: 1.5;
+}
+
+/* Estilo para o rodapé do card */
+.custom-card .card-footer {
+  background-color: #f8f9fa; /* Cor de fundo suave no rodapé */
+  border-top: 1px solid #e0e0e0; /* Borda superior suave no rodapé */
+}
+
+/* Estilo para a linha horizontal */
+.custom-card .card-footer hr {
+  border-top: 1px solid #ccc; /* Cor mais suave para a linha */
+}
+
+/* Estilo para as informações dentro do card (nome, idade, etc.) */
+.custom-card .text-muted {
+  color: #6c757d; /* Cor cinza suave para informações secundárias */
+}

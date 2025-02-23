@@ -1,19 +1,13 @@
-<div *ngFor="let aluno of alunos">
-  <p><strong>Nome:</strong> {{ aluno.nome }}</p>
-  <p><strong>Idade:</strong> {{ aluno.idade }}</p>
-  <p><strong>Turma:</strong> {{ aluno.turma.nome }}</p>
-  <p><strong>Curso:</strong> {{ aluno.turma.nome }}</p>
-  <p><strong>Professor:</strong> {{ aluno.turma.professor }}</p>
-  <hr>
+<div *ngFor="let aluno of alunos" class="card mb-3 custom-card">
+  <div class="card-body">
+    <h5 class="card-title">Informações do Aluno</h5>
+    <p><strong>Nome:</strong> <span class="text-muted">{{ aluno.nome }}</span></p>
+    <p><strong>Idade:</strong> <span class="text-muted">{{ aluno.idade }}</span></p>
+    <p><strong>Turma:</strong> <span class="text-muted">{{ aluno.turma.nome }}</span></p>
+    <p><strong>Curso:</strong> <span class="text-muted">{{ aluno.turma.nome }}</span></p>
+    <p><strong>Professor:</strong> <span class="text-muted">{{ aluno.turma.professor }}</span></p>
+  </div>
+  <div class="card-footer text-muted">
+    <hr class="my-2">
+  </div>
 </div>
-
-
-<!--->
-
-<h2>Lista de Alunos</h2>
-<ul>
-  <li *ngFor="let aluno of alunos">
-    {{ aluno.nome }} - {{ aluno.idade }} anos - Turma: {{ aluno.turma.exibirInformacoes() }}
-  </li>
-</ul>
-<!---->
