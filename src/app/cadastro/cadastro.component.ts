@@ -9,9 +9,9 @@ import { Aluno } from '@app/aluno';
 })
 export class CadastroComponent {
   formulario = new FormGroup ({
-    nome:      new FormControl ('', Validators.required),
-    idade:     new FormControl ( null, Validators.required),
-    turma:     new FormControl ('', Validators.required),
+    nome:      new FormControl ('',    [Validators.required, Validators.minLength(3)]),
+    idade:     new FormControl ( null, [Validators.required, Validators.min(0), Validators.max(120)]),
+    turma:     new FormControl ('',    [Validators.required, Validators.minLength(3)]),
   })
 
   //Vetor

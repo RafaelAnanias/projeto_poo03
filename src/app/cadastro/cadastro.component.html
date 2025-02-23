@@ -1,9 +1,46 @@
 <form [formGroup]="formulario" >
+  @if (formulario.get('nome')?.hasError('required') && formulario.get('nome')?.touched) {
+    <p class="alert alert-warning"> O campo nome é obrigatório</p>
+  }
+
+  <!---->
+  @if (formulario.get('nome')?.hasError('minlength') && formulario.get('nome')?.touched) {
+    <p class="alert alert-warning"> O campo nome precisa conter pelo menos 3 caracteres</p>
+  }
+
   <input type="text" formControlName="nome"     class="form-control">
+
   <input type="text"   formControlName="idade"  placeholder="idade" class="form-control">
+
+  @if (formulario.get('idade')?.hasError('required') && formulario.get('idade')?.touched) {
+    <p class="alert alert-warning"> O campo idade é obrigatório</p>
+  }
+
+  <!---->
+  @if (formulario.get('idade')?.hasError('min') && formulario.get('idade')?.touched) {
+    <p class="alert alert-warning"> O campo idade não aceita números inferiores a 0</p>
+  }
+
+    <!---->
+    @if (formulario.get('idade')?.hasError('max') && formulario.get('idade')?.touched) {
+      <p class="alert alert-warning"> O campo idade não aceita números superiores a 120</p>
+    }
+
+
+
   <input type="text"  formControlName="turma"   placeholder="turma" class="form-control">
 
+  @if (formulario.get('turma')?.hasError('required') && formulario.get('turma')?.touched) {
+    <p class="alert alert-warning"> O campo turma é obrigatório</p>
+  }
+
+  <!---->
+  @if (formulario.get('turma')?.hasError('minlength') && formulario.get('turma')?.touched) {
+    <p class="alert alert-warning"> O campo turma precisa conter pelo menos 3 caracteres</p>
+  }
+
   <input type="button" value="cadastrar" (click)="cadastrar()" class="btn btn-primary">
+
 </form>
 
 <table class="table">
